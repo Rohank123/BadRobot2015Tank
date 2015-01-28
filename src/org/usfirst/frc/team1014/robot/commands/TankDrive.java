@@ -27,6 +27,7 @@ public class TankDrive extends CommandBase{
 	protected void execute() 
 	{
 		driveTrain.tankDrive(-OI.xboxController.getLeftStickY(), -OI.xboxController.getRightStickY());
+		
 		if(OI.xboxController.isAButtonPressed()) {
 			p.shift(true);
 		}
