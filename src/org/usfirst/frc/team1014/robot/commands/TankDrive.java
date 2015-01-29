@@ -1,10 +1,12 @@
 package org.usfirst.frc.team1014.robot.commands;
 
 import org.usfirst.frc.team1014.robot.OI;
+import org.usfirst.frc.team1014.robot.subsystems.Pneumatics;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class TankDrive extends CommandBase{
+	Pneumatics p = Pneumatics.getInstance();
 
 	public TankDrive()
     {
@@ -25,6 +27,13 @@ public class TankDrive extends CommandBase{
 	protected void execute() 
 	{
 		driveTrain.tankDrive(-OI.xboxController.getLeftStickY(), -OI.xboxController.getRightStickY());
+		
+		if(OI.xboxController.isAButtonPressed()) {
+			p.shift(true);
+		}
+		if(OI.xboxController.isBButtonPressed()) {
+			p.shift(false);
+		}
 	}
 
 	@Override

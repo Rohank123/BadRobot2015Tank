@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 
 import org.usfirst.frc.team1014.robot.commands.CommandBase;
 import org.usfirst.frc.team1014.robot.commands.TankDriveGroup;
+import org.usfirst.frc.team1014.robot.commands.autonomouscommandgroups.DriveTestAll;
 import org.usfirst.frc.team1014.robot.commands.autonomouscommandgroups.DriveTestSquare;
 
 /**
@@ -42,7 +43,7 @@ public class Robot extends IterativeRobot {
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-    	Scheduler.getInstance().add(new DriveTestSquare());
+    	Scheduler.getInstance().add(new DriveTestAll());
     }
 
     /**

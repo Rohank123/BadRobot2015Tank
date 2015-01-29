@@ -27,4 +27,11 @@ public class RobotMap {
 	
 	//CAN IDs
 	public static final int PCM = 0; 
+	
+	//Solenoid IDs
+	public static final int RIGHT_LOW = 0;
+	public static final int RIGHT_HIGH = 1;
+	public static final int LEFT_LOW = 2;
+	public static final int LEFT_HIGH = 3;
+	
 }
